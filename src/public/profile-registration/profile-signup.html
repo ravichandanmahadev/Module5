@@ -1,0 +1,47 @@
+<form name="regForm" ng-submit="signCtrl.onsubmit();">
+<h1>Sign Up</h1>
+<div class="container">
+  <div ng-if="signCtrl.successMessage">Profile information saved successfully </div>
+ <div class="form-group" ng-if="!signCtrl.successMessage">
+ <div>
+   <label> First Name : </label>
+   <input type="text" name="firstName" placeholder="First Name" class="form-control"
+          ng-model="signCtrl.FirstName" required></input>
+    <span ng-if="regForm.firstName.$error.required && regForm.firstName.$touched">
+            Please enter first name</span>
+ </div>
+ <div>
+   <label> Last Name : </label>
+   <input type="text" name="lastName" placeholder="Last Name"  class="form-control"
+          ng-model = "signCtrl.LastName" required></input>
+   <span ng-if="regForm.lastName.$error.required  && regForm.lastName.$touched">
+     Please enter last name</span>
+ </div>
+ <div>
+   <label> e-mail  : </label>
+    <input type="email" name="email" placeholder="sample@domain.com"  class="form-control"
+           ng-model="signCtrl.eMail" required></input>
+    <span ng-if="(regForm.email.$invalid || regForm.email.$error.required)  && regForm.lastName.$touched">
+             Please enter valid e-mail address</span>
+ </div>
+ <div>
+   <label> Phone Number : </label>
+    <input type="text" name="phone" placeholder="123-456-7890"  class="form-control"
+           ng-model="signCtrl.PhoneNumber" required ng-pattern = "/\d{3}-\d{3}-\d{4}/g"></input>
+    <span ng-if="(regForm.phone.$error.required || regForm.phone.$error.pattern)  && regForm.phone.$touched">
+                    Please enter valid phone number (123-456-7890)</span>
+ </div>
+ <div>
+   <label> Item Id : </label>
+    <input type="text" name="itemid" placeholder="Item Id"  class="form-control"
+           ng-model="signCtrl.ItemId" required menu-validator></input>
+    <span ng-if="(regForm.itemid.$error.required || regForm.itemid.$error.menuValidator )  && regForm.itemid.$touched">
+                           Please enter valid Menu Item Id</span>
+ </div>
+<br/>
+ <div>
+    <button type="submit" class="btn btn-default" ng-disabled="regForm.$invalid">Submit</button>
+ </div>
+ </div>
+</div>
+</form>
