@@ -7,6 +7,7 @@
   function profilecontrollerfunction(profileInformation,MenuService)
   {
       var $ctrl = this ;
+      // console.log(profileInformation);
       if(profileInformation)
       {
           $ctrl.profileInformation = profileInformation;

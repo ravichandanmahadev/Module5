@@ -5,6 +5,7 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+
 .initial-loading {
   margin-top: 60px;
 }
@@ -53,7 +54,7 @@ body {
 #nav-list {
   margin-top: 10px;
 }
-#nav-list a {
+#nav-list a{
   color: #951C49;
   text-align: center;
 }
