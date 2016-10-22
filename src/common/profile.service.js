@@ -11,10 +11,13 @@ function profileservicefunction()
 
   service.getProfile = function()
   {
+    //RETURN PROFILE OBJECT 
     return profileObject;
   }
+
   service.setProfile = function(request)
   {
+    //SET PROFILE OBJECT
     profileObject = {};
     profileObject.firstName =request.firstName;
     profileObject.lastName = request.lastName;

@@ -11,9 +11,9 @@
       if(profileInformation)
       {
           $ctrl.profileInformation = profileInformation;
-          console.log(profileInformation);
+          // console.log(profileInformation);
           MenuService.getMenuItem($ctrl.profileInformation.menuId).then(function(response){
-          $ctrl.menuItem = response.data;
+          $ctrl.profileInformation.menuItem = response.data;
         });
       }
 

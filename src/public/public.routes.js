@@ -42,7 +42,7 @@ function routeConfig ($stateProvider) {
       }
     }).state('public.profile', {
       url:'/profile',
-      templateUrl : "src/public/profile-information/profile.html",
+      templateUrl : "src/public/profile/profile.html",
       controller: "profilecontroller as profileCtrl",
       resolve: {
          profileInformation: ['profileservice', function(profileservice){
@@ -51,9 +51,8 @@ function routeConfig ($stateProvider) {
        }
     }).state('public.signup',{
       url:'/signup',
-      templateUrl:'src/public/profile-registration/profile-signup.html',
-      controller: "signupcontroller as signCtrl"     
-
+      templateUrl:'src/public/registration/profile-signup.html',
+      controller: "signupcontroller as signCtrl"
     });
 }
 })();

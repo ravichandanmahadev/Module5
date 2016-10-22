@@ -2,8 +2,8 @@
 <h1>Sign Up</h1>
 <div class="container">
   <div ng-if="signCtrl.successMessage">
-       Profile information saved successfully !!!!
-    </div>
+      Your information has been saved!!
+  </div>
  <div class="form-group" ng-if="!signCtrl.successMessage">
  <div>
    <label> First Name : </label>
@@ -34,11 +34,11 @@
                     Please enter valid phone number (123-456-7890)</span>
  </div>
  <div>
-   <label> Item Id : </label>
-    <input type="text" name="itemid" placeholder="Item Id"  class="form-control"
+   <label> Menu Number : </label>
+    <input type="text" name="itemid" placeholder="Enter Menu Number"  class="form-control"
            ng-model="signCtrl.ItemId" required menu-validator></input>
     <span ng-if="(regForm.itemid.$error.required || regForm.itemid.$error.menuValidator )  && regForm.itemid.$touched">
-                           Please enter valid Menu Item Id</span>
+                           No such menu number exists</span>
  </div>
 <br/>
  <div>

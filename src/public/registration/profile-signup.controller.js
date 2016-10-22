@@ -8,14 +8,13 @@ function signupcontrollerfunction(profileservice)
 {
    var $ctrl = this;
 
+   // ON CLICKING SUBMIT
    $ctrl.onsubmit = function(){
-     var request = {
-                      firstName:$ctrl.FirstName,
-                      lastName:$ctrl.LastName,
-                      eMail:$ctrl.eMail,
-                      phoneNumber:$ctrl.PhoneNumber,
-                      menuItemId:$ctrl.ItemId
-                    };
+     //POPULATE THE REQUEST OBJECT
+     var request = { firstName:$ctrl.FirstName,lastName:$ctrl.LastName,eMail:$ctrl.eMail,phoneNumber:$ctrl.PhoneNumber,
+                      menuItemId:$ctrl.ItemId };
+
+     //SET PROFILE
      profileservice.setProfile(request);
      $ctrl.successMessage= true;
    }

@@ -9,11 +9,11 @@
         require: 'ngModel',
         link: function($scope, $elem, $attr, ctrl) {
             ctrl.$asyncValidators.menuValidator = function(value) {
-              return MenuService.getMenuItem(value).then(function(response){
+              return MenuService.getMenuItem(value).then(function(){
                   return true;
               }).catch(function(){
                 return $q.reject("Please enter valid item id");
-              });              
+              });
             }
         }
     };
